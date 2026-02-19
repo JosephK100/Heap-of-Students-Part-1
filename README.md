@@ -1,6 +1,6 @@
 # Heap-of-Students-Part-1
 -Mermaid-
-```
+```mermaid
 classDiagram
     class Address {
         -string street
