@@ -6,10 +6,12 @@
 
 class Date{
 	private:
-		std::string dob;
+		int month;
+		int day;
+		int year;
 	public:
 		Date();
-		void init(std::string dob);
+		void init(std::string dateString);
 		void printDate() const;
 };
 #endif
