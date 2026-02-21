@@ -11,7 +11,7 @@ void Date::init(std::string dateString){
 	std::stringstream ss(dateString);
 	std::string monthString, dayString, yearString;
 	
-	getline(ss, monthsString, '/');
+	getline(ss, monthString, '/');
 	getline(ss, dayString, '/');
 	getline(ss, yearString, '/');
 

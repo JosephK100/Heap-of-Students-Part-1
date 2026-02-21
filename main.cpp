@@ -1,6 +1,6 @@
 #include <iostream>
 #include "date.h"
-#include "address.h"
+// #include "address.h"
 #include "student.h"
 
 void testAddress();
@@ -27,7 +27,7 @@ void testDate(){
  d.printDate();
 } // end testDate
 
-void testStudent(){
+// void testStudent(){
   std::string studentString = "Danielle,Johnson,32181 Johnson Course Apt. 389,New Jamesside,IN,59379,02/17/2004,05/15/2027,65";
   Student* student = new Student();
   student->init(studentString);
