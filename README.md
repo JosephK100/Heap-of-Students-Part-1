@@ -11,7 +11,6 @@ classDiagram
         init(street, city, state, zip)
         printAddress()
     }
-
     class Date {
         int month
         int day
@@ -20,20 +19,21 @@ classDiagram
         init(dateString)
         printDate()
     }
-
     class Student {
         string firstName
         string lastName
-        Address address
-        Date birthdate
-        Date gradDate
+        Address* address
+        Date* birthdate
+        Date* gradDate
         int credits
         Student()
-        init(studentString)
+        Student(line : string)
+        ~Student()
         printStudent()
-        getLastFirst()
+        getLastFirst() string
+        getLastName() string
     }
-
+    %% Relationships
     Student --> Address : has
     Student --> Date : birthdate
     Student --> Date : gradDate

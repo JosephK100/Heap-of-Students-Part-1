@@ -28,7 +28,7 @@ Student::Student (std::string line){
 //Get line for dob, graduation date, and credits held.
 	getline(ss, dobString, ',');
 	getline(ss, gradString, ',');
-	getline(ss, creditString,v',');
+	getline(ss, creditsString,v',');
 //Initialize 
 	address = new Address();
 	address->init(street, city, state, zip);
@@ -49,7 +49,7 @@ Student::~Student(){
 	delete gradDate;
 }
 //Print student function
-void Student::Student() const{
+void Student::printStudent() const{
 	std::cout << firstName << " " << lastName << std::endl;
 	address->printAddress();
 	birthdate->printDate();
