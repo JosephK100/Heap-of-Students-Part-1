@@ -3,37 +3,39 @@
 ```mermaid
 classDiagram
     class Address {
-        string street
-        string city
-        string state
-        string zip
-        Address()
-        init(street, city, state, zip)
-        printAddress()
+        - string street
+        - string city
+        - string state
+        - string zip
+        + Address()
+        + init(street, city, state, zip)
+        + printAddress()
     }
+
     class Date {
-        int month
-        int day
-        int year
-        Date()
-        init(dateString)
-        printDate()
+        - int month
+        - int day
+        - int year
+        + Date()
+        + init(dateString)
+        + printDate()
     }
+
     class Student {
-        string firstName
-        string lastName
-        Address* address
-        Date* birthdate
-        Date* gradDate
-        int credits
-        Student()
-        Student(line : string)
-        ~Student()
-        printStudent()
-        getLastFirst() string
-        getLastName() string
+        - string firstName
+        - string lastName
+        - Address* address
+        - Date* birthdate
+        - Date* gradDate
+        - int credits
+        + Student()
+        + Student(line : string)
+        + ~Student()
+        + printStudent()
+        + getLastFirst() string
+        + getLastName() string
     }
-    %% Relationships
+
     Student --> Address : has
     Student --> Date : birthdate
     Student --> Date : gradDate
