@@ -1,12 +1,15 @@
+//Date.cpp
 #include <iostream>
 #include "date.h"
 #include <sstream>
 
+//Default constructor
 Date::Date(){
 	month = 0;
 	day = 0;
 	year = 0;
 }
+//Parses the date string in mm/dd/yyyy format
 void Date::init(std::string dateString){
 	std::stringstream ss(dateString);
 	std::string monthString, dayString, yearString;
@@ -28,6 +31,7 @@ void Date::init(std::string dateString){
 		year = year * 10 + (c - '0');
 	}
 }
+//Print the date in a readable form using month names
 void Date::printDate() const{
 	std::string monthName;
 	if (month == 1) monthName = "January";
