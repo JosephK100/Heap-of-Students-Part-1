@@ -83,4 +83,59 @@ Date.init(dateString)
 
 Date.printDate()
     Convert the numeric month into its month name. 1-12?
-    Print month name and year.    
+    Print month name and year.
+--------------------------------
+-------------Part 2------------- 
+loadStudents(students)
+    Open the student CSV file.
+    While there are lines left in the file:
+        Read a line from the file. 
+        Create a new student object using the CSV constructor.
+        Add the student pointer to the students vector.
+    Close the CSV file.
+
+printStudents(students)
+    For every student in the student vector:
+        Call printStudent()
+
+showStudentNames(students)
+    For every student on the student vector:
+        Retrieve the student's last and first name using getLastFirst().
+        Print the retrieved last and first name.
+
+findStudent(students)
+    Ask the user to enter the name of whichever student they're searching for.
+    Process user input?
+    For each student inside the student vector:
+        If the student's last name matches the user's search input:
+            Print the student's full info using printStudent()
+        If there were no matches the user's search:
+            Print a message saying "No such student."
+
+delStudents(students)
+    For each student pointer in the student vector:
+        Delete the student pointer to free up some space.
+    Clear the student vector so it's empty.
+
+menu()
+    Print the menu options, which will be:
+        0) Quit
+        1) Print all student names
+        2) Print all student data
+        3) Find a student
+    Return user choice.
+    Return the requested information (or quit, if selected)
+
+Main Loop (Part 2)
+    Make an empty vector of student pointers.
+    Call loadStudents() to fill that vector.
+    Loop through the menu() to retrieve the user's choice.
+        If the choice is "1":
+            Call showStudentNames()
+        If the choice is "2":
+            Call printStudents()
+        If the choice is "3":
+            Call findStudent()
+    Until the user enters "0"
+    Finally, call delStudents() to free up all the memory.
+    End the program.
