@@ -28,7 +28,7 @@ Student::Student (std::string line){
 //Get line for dob, graduation date, and credits held.
 	getline(ss, dobString, ',');
 	getline(ss, gradString, ',');
-	getline(ss, creditsString,v',');
+	getline(ss, creditsString, ',');
 //Initialize 
 	address = new Address();
 	address->init(street, city, state, zip);
@@ -57,7 +57,4 @@ void Student::printStudent() const{
 	std::cout << "Credits: " << credits << std::endl;
 	std::cout << "____________________________________" << std::endl;
 }
-//Execute the LastFirst function
-std::string Student::getLastFirst() const{
-	return lastName + ", " + firstName;
-}
+

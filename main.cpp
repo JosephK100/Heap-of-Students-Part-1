@@ -30,7 +30,7 @@ int main(){
 		findStudent(students);
 	}
      } while (command != 0);
-	deltStudents(students);
+	delStudents(students);
 	return 0;
 }
 
