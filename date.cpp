@@ -13,7 +13,7 @@ void Date::init(std::string dateString){
 	
 	getline(ss, monthString, '/');
 	getline(ss, dayString, '/');
-	getline(ss, yearString, '/');
+	getline(ss, yearString);
 
 	month = 0;
 	for (char c : monthString){
@@ -21,7 +21,7 @@ void Date::init(std::string dateString){
 	}
 	day = 0;
 	for (char c : dayString){
-		day = day * 10 + (c = '0');
+		day = day * 10 + (c - '0');
 	}
 	year = 0;
 	for (char c : yearString){
@@ -31,7 +31,7 @@ void Date::init(std::string dateString){
 void Date::printDate() const{
 	std::string monthName;
 	if (month == 1) monthName = "January";
-	else if (month == 2) monthName = "Febuary";
+	else if (month == 2) monthName = "Feburary";
 	else if (month == 3) monthName = "March";
 	else if (month == 4) monthName = "April";
 	else if (month == 5) monthName = "May";

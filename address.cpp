@@ -16,6 +16,7 @@ void Address::init(std::string street,
 	this->state = state;
 	this->zip = zip;
 }
+//Print address in an okay format
 void Address::printAddress() const{
 	std::cout << street << std::endl;
 	std::cout << city << ", " << state << " " << zip << std::endl;

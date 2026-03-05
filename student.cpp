@@ -16,7 +16,7 @@ Student::Student(){
 Student::Student (std::string line){
 	std::stringstream ss(line);
 	std::string street, city, state, zip;
-	std::string dobString, gradString, creditsString;
+	std::string dobString, gradString;
 //Get line for first and last name.
 	getline(ss, firstName, ',');
 	getline(ss, lastName, ',');
@@ -28,7 +28,9 @@ Student::Student (std::string line){
 //Get line for dob, graduation date, and credits held.
 	getline(ss, dobString, ',');
 	getline(ss, gradString, ',');
-	getline(ss, creditsString, ',');
+//Debug tests
+	//std::cout << "DOB string [" << dobString << "]\n";
+	//std:: cout << "Grad String [" << gradString << "]\n";
 //Initialize 
 	address = new Address();
 	address->init(street, city, state, zip);
@@ -39,7 +41,7 @@ Student::Student (std::string line){
 	gradDate = new Date();
 	gradDate->init(gradString);
 
-	credits = std::stoi(creditsString);
+	credits = 0;
 }
 
 //Destructor
