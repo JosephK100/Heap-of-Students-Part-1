@@ -11,8 +11,8 @@ void loadStudents(std::vector<Student*>& students);
 void printStudents(const std::vector<Student*>& students);
 void showStudentNames(const std::vector<Student*>& students);
 void findStudent(const std::vector<Student*>& students);
-void deflStudents(std::vector<Student*>& students);
-int main();
+void delStudents(std::vector<Student*>& students);
+int menu();
 
 int main(){
 	std::vector<Student*> students;
@@ -29,7 +29,7 @@ int main(){
 	else if (command == 3){
 		findStudent(students);
 	}
-     } While (command != 0);
+     } while (command != 0);
 	deltStudents(students);
 	return 0;
 }
@@ -58,7 +58,7 @@ int menu(){
 
 	int command = 0;
 	std::cin >> command;
-	return command:
+	return command;
 }
 //ShowStudentNames function 
 void showStudentNames(const std::vector<Student*>& students){
@@ -79,7 +79,7 @@ void findStudent(const std::vector<Student*>& students){
 	std::cout << "Enter last name: ";
 	std::cin >> last;
 	for (Student* s : students){
-		if (s->getLastName() == last{
+		if (s->getLastName() == last) {
 		   s->printStudent();
 		   return;
 		 }

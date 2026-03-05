@@ -19,7 +19,11 @@ class Student{
 		~Student(); //Student destructor
 
 		void printStudent() const;
-		std::string getLastFirst() const;
-		std:: getLastFirst() const { return lastName; } 
+		std:: string getLastName() const {
+			return lastName;
+		}
+		std:: string getLastFirst() const { 
+			return lastName + ", " +  firstName;
+		}
 };
 #endif
